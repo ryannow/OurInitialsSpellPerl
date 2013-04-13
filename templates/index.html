@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="{{ url_for('results') }}" method="POST" class="search-box">
+<table
+ style="background-color: rgb(212, 212, 211); width: 100%; text-align: left; margin-left: auto; margin-right: auto;"
+ border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td>Where are you?</td>
+      <td><input size="20" placeholder="Claremont" name="location" type="text"></td>
+    </tr>
+    <tr>
+      <td>When are you free?</td>
+      <td>
+      <select name="time_menu" width="50">
+      <option value="morning">Morning</option>
+      <option value="afternoon">Afternoon</option>
+      <option value="evening">Evening</option>
+      <option value="nighttime">Night Time</option>
+      <option value="whenever">Whenever</option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td>How much money can you spend?</td>
+      <td>
+      <select name="budget_menu" width="50">
+      <option value="none">None</option>
+      <option value="under10">Under $10</option>
+      <option value="under25">Under $25</option>
+      <option value="under50">Under $50</option>
+      <option value="under100">Under $100</option>
+      <option value="infinite">Infinite</option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><input value="Submit" type="submit"></td>
+    </tr>
+  </tbody>
+</table>
+</form>
+</br></br>
+
+{% endblock %}
